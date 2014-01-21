@@ -2,3 +2,10 @@
 
 <%= render 'shared/content_title', title: @post.title %>
 <p><%= @post.description %></p>
+
+<%= render 'shared/error', obj: @comment %>
+<%= form_for [@post, @comment] do |f| %>
+  <%= f.text_area :body %>
+  <br>
+  <%= f.submit "Create comment", class: 'btn btn-primary' %>
+<% end%>
