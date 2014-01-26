@@ -9,3 +9,11 @@
   <br>
   <%= f.submit "Create comment", class: 'btn btn-primary' %>
 <% end%>
+
+<% @post.comments.each do |comment| %>
+  <div class='well span8'>
+    <em>"<%= comment.body %>"</em><br>
+    <span class='quiet'>by </span><%= comment.creator.username %>
+    <small>at <%= comment.created_at %></small>
+  </div>
+<% end %>
