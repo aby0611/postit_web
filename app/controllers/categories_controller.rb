@@ -10,7 +10,7 @@ class CategoriesController < ApplicationController
       flash[:notice] = "Category \"#{@category.name}\" is created"
       redirect_to posts_path
     else
-      render 'category/new'
+      render 'categories/new'
     end
   end
 
