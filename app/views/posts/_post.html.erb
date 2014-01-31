@@ -8,5 +8,8 @@
       <small>at <%= display_datetime(post.created_at) %></small>
     </p>
     <span> <%= link_to("#{post.comments.size} comments", post_path(post)) %></span>
+    <% if logged_in? %>
+      <span> <%= link_to("[Edit this post]", edit_post_path(post)) %> </span>
+    <% end %>
   </div>
 </div>
