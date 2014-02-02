@@ -1,6 +1,6 @@
 class CreateCategories < ActiveRecord::Migration
   def change
-    create_table :comments do |t|
+    create_table :categories do |t|
       t.text :name
       t.timestamps
     end
